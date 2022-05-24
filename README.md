@@ -3,6 +3,9 @@
 ## Objective
 "Student Search" searches for student files in a zipped folder stored in the Downloads directory, and then stores them in another directory.
 
+## WARNING
+Do not download students.txt from Windows. This will cause find to fail because in Windows, the end of each line contains '\r' character, but the read command splits on '\n'. Be sure to download the text file in Linux, or create a text file in Linux and copy the content from the Windows version of students.txt to Linux.
+
 ## Rundown of the Code
 - The first conditional checks to see if there was one argument tied to the script ($# = 1). If not, print the usage message and exit out with 1
 - Initialize the variables FILE, DIRECT, and MOVETO
